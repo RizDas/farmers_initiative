@@ -2,6 +2,7 @@
 .page-container {
   min-height: 100vh;
   background: linear-gradient(to bottom, #f8f9f4, #f0f4ec, #e8f0e4, #e0eadc);
+  padding-top: 80px;
 }
 
 /* Hero Section */

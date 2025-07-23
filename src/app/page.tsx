@@ -260,7 +260,7 @@ export default function Page() {
         <div className="cta-container">
           <div className="cta-content">
             <h2 className="cta-title">Ready to Transform Your Farm?</h2>
-            <p className="cta-description">
+            <p className="cta-description ">
               Join thousands of farmers who are already using AI to increase
               yields, reduce costs, and make smarter farming decisions.
             </p>

@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav id="navbar">
       <div className="navbar-logo">
-        <Link href="/">Hello World</Link>
+        <Link href="/">KrishiShakti</Link>
       </div>
 
       <div id="menu-toggle">
@@ -15,8 +15,13 @@ function Navbar() {
       </div>
 
       <div className="navbar-links nav-links" id="nav-links">
-        <Link href="/">About</Link>
-        <Link href="/">Tours</Link>
+        <Link href="/features">Features</Link>
+        <Link href="/pricing">Pricing</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/dashboard" className="btn btn-primary">
+          Get Started
+        </Link>
       </div>
     </nav>
   );
