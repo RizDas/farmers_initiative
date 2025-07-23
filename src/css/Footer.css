@@ -1,7 +1,7 @@
 #footer {
   width: 100%;
   max-width: 100%;
-  background: #e6eee1;
+  background: linear-gradient(180deg, #d8e4d4, #f0f4ec);
   color: #466329;
   overflow-y: hidden;
   padding-top: 0%;
@@ -289,7 +289,7 @@
 }
 
 .email {
-  font-size: 10vw;
+  font-size: 9.1vw;
   font-weight: 700;
   color: #466329;
   margin: 10px 0 0 0;

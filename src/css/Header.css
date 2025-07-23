@@ -2,7 +2,13 @@
   position: sticky;
   transform: translateY(20%);
   top: 0;
-  background-color: rgba(30, 30, 30, 0.75);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.15)
+  );
+  background-blend-mode: soft-light;
   padding: 15px 35px;
   padding-left: 55px;
   display: flex;
@@ -11,55 +17,159 @@
   border-radius: 60px;
   width: 90%;
   margin: 0 auto;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(60px) saturate(150%) brightness(1.2);
+  -webkit-backdrop-filter: blur(60px) saturate(150%) brightness(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
   z-index: 10;
-  transition: transform 0.8s ease-in-out;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  margin-bottom: -90px;
+  height: 80px;
+  width: 90vw;
 }
+
+/* Liquid glass animated background */
+#navbar::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.03) 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 60%,
+    transparent 80%
+  );
+  animation: liquidFlow 12s ease-in-out infinite;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Secondary liquid layer */
+#navbar::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.03) 30%,
+    transparent 70%
+  );
+  animation: liquidPulse 10s ease-in-out infinite reverse;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+@keyframes liquidFlow {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1) translateX(0);
+    opacity: 0.4;
+  }
+  33% {
+    transform: rotate(120deg) scale(1.05) translateX(10px);
+    opacity: 0.6;
+  }
+  66% {
+    transform: rotate(240deg) scale(0.95) translateX(-10px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes liquidPulse {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.5;
+  }
+}
+
 #navbar.hide {
   transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .reveal-navbar {
   transform: translateY(20%) !important;
   pointer-events: auto;
 }
+
+/* Enhanced hover effect for liquid glass */
+#navbar:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.08)
+  );
+  backdrop-filter: blur(52px) saturate(160%) brightness(1.25);
+  -webkit-backdrop-filter: blur(52px) saturate(160%) brightness(1.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 #navbar-logo {
   display: flex;
   align-items: center;
+  z-index: 2;
 }
+
 .navbar-logo {
-  width: 400px; /* crop area */
+  width: 400px;
   height: 45px;
   overflow: hidden;
 }
 
 .navbar-logo img {
-  height: 100px; /* larger than container to crop */
+  height: 100px;
   object-fit: cover;
   transform: translateY(-26px);
 }
+
 #menu-toggle {
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 2;
 }
+
 .navbar-links {
   display: flex;
   align-items: center;
+  z-index: 2;
 }
+
 .navbar-links a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: 400;
   position: relative;
-  transition: color 0.3s ease;
-  transition: 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 .navbar-links a:hover {
   color: #1b1464;
+  text-shadow: 0 2px 4px rgba(27, 20, 100, 0.3);
 }
 
 .bar {
@@ -74,14 +184,21 @@
   border-radius: 30px;
   font-weight: 500;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
 }
 
 .btn-primary {
-  background-color: #251d7b;
+  background: linear-gradient(135deg, #251d7b, #1b1464);
   color: white !important;
   padding: 10px 30px;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(37, 29, 123, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .btn-primary:hover {
-  background-color: #1b1464;
+  background: linear-gradient(135deg, #1b1464, #151047);
+  box-shadow: 0 6px 20px rgba(37, 29, 123, 0.4);
+  transform: translateY(-1px);
 }
