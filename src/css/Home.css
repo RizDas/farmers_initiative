@@ -6,33 +6,21 @@
 }
 
 /* Hero Section */
-.hero-section {
-  padding: 80px 24px;
-  max-width: 800px;
-  text-align: left; /* Changed from center to left */
-  padding-top: 120px;
-  padding-left: 80px; /* Added proper left padding */
-  height: 98vh;
+section.vid {
+  height: 5000px;
+  transform: translateY(-105px);
 }
 
-.hero-content {
-  margin-bottom: 64px;
+section.vid .holder {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* if it’s behind stuff */
 }
 
-.hero-title {
-  font-size: 56px;
-  font-weight: bold;
-  color: #3d5a3d;
-  margin-bottom: 24px;
-  line-height: 1.1;
-}
-
-.hero-description {
-  font-size: 22px;
-  color: #556b55;
-  max-width: 800px;
-  margin: 0 0 40px 0; /* Changed from auto centering to left alignment */
-  line-height: 1.6;
+section.vid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-buttons {

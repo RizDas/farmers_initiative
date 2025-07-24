@@ -108,11 +108,7 @@ function Footer() {
         </div>
 
         {/*<p className="email">support@farmtech.com</p>*/}
-        <img
-          src="https://cdn.prod.website-files.com/62551fa7bee8db16e944f95d/62860b0f0b2b3a571dd63efe_6267e27c6f5bad251ae41a80_5f206110d859773e2b0a7b85_image-footer-farm-template.webp"
-          alt="footerbg"
-          className="footerimg"
-        />
+        <img src="/footerbg.png" alt="footerbg" className="footerimg" />
       </div>
     </footer>
   );
