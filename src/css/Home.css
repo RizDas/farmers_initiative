@@ -8,10 +8,9 @@
 /* Hero Section */
 .hero-section {
   padding: 80px 24px;
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 800px;
   text-align: left; /* Changed from center to left */
-  padding-top: 180px;
+  padding-top: 120px;
   padding-left: 80px; /* Added proper left padding */
   height: 98vh;
 }
