@@ -1,10 +1,19 @@
 import FarmerNews from "@/components/News";
+import "../../../css/News.css";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-4">
-      <h1 className="text-2xl font-bold mb-4">Latest Farmer News</h1>
-      <FarmerNews />
-    </main>
+    <div className="news-container">
+      <div className="news-page-header">
+        <h1 className="news-page-title">Latest Agricultural News</h1>
+        <p className="news-page-subtitle">
+          Stay updated with the latest agriculture and farming news from across
+          India
+        </p>
+      </div>
+      <main className="news-main-content">
+        <FarmerNews />
+      </main>
+    </div>
   );
 }

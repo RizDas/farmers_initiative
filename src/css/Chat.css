@@ -156,6 +156,7 @@
   color: #2d4a2d;
   outline: none;
   transition: border-color 0.2s ease;
+  z-index: 100;
 }
 
 .chat-input:focus {

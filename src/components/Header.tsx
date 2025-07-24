@@ -16,9 +16,9 @@ function Navbar() {
 
       <div className="navbar-links nav-links" id="nav-links">
         <Link href="/features">Features</Link>
-        <Link href="/pricing">Pricing</Link>
+        <Link href="/chat">Chat</Link>
+        <Link href="/news">News</Link>
         <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
         <Link href="/dashboard" className="btn btn-primary">
           Get Started
         </Link>
