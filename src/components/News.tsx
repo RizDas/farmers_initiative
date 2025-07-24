@@ -87,9 +87,9 @@ function News(props: { disableCustomTheme?: boolean }) {
       {/* Sticky Header */}
       <div className="news-header">
         <div className="news-header-content">
-          <h2 className="news-header-title">Farming News India</h2>
+          <h2 className="news-header-title">Farming News</h2>
           <p className="news-header-description">
-            Latest agriculture and farming news from India
+            Latest agriculture and farming news globally
           </p>
         </div>
       </div>

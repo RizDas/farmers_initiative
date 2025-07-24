@@ -10,7 +10,8 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
-import "../../../css/Home.css";
+import "../../../css/Dashboard.css";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -26,11 +27,9 @@ export default function Page() {
             timing optimization, and smart irrigation management.
           </p>
           <div className="hero-buttons">
-            <button className="btn-primary">
-              Get Started Today
-              <ArrowRight size={20} />
-            </button>
-            <button className="btn-secondary">Learn More</button>
+            <Link href="/about">
+              <button className="btn-secondary">Learn More</button>
+            </Link>
           </div>
         </div>
       </section>

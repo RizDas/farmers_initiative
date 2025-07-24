@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="news-page-title">Latest Agricultural News</h1>
         <p className="news-page-subtitle">
           Stay updated with the latest agriculture and farming news from across
-          India
+          the World
         </p>
       </div>
       <main className="news-main-content">
