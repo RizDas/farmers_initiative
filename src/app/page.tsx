@@ -9,7 +9,6 @@ import {
   Users,
   CheckCircle,
   ArrowRight,
-  Leaf,
 } from "lucide-react";
 import "../css/Home.css";
 
@@ -19,16 +18,12 @@ export default function Page() {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <div className="hero-icon">
-            <Leaf size={64} />
-          </div>
           <h1 className="hero-title">
-            Empowering Farmers with AI-Driven Agriculture
+            {"Empowering Farmers with \n AI-Driven Agriculture"}
           </h1>
           <p className="hero-description">
             Transform your farming with intelligent weather predictions, crop
-            timing optimization, and smart irrigation management. Join thousands
-            of farmers already benefiting from our AI solutions.
+            timing optimization, and smart irrigation management.
           </p>
           <div className="hero-buttons">
             <button className="btn-primary">
@@ -36,25 +31,6 @@ export default function Page() {
               <ArrowRight size={20} />
             </button>
             <button className="btn-secondary">Learn More</button>
-          </div>
-        </div>
-
-        <div className="hero-stats">
-          <div className="stat-item">
-            <div className="stat-number">15K+</div>
-            <div className="stat-label">Active Farmers</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">89%</div>
-            <div className="stat-label">Yield Improvement</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">40%</div>
-            <div className="stat-label">Water Savings</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">24/7</div>
-            <div className="stat-label">AI Monitoring</div>
           </div>
         </div>
       </section>
@@ -204,7 +180,27 @@ export default function Page() {
       {/* Success Stories Section */}
       <section className="success-section">
         <div className="success-container">
-          <h2 className="section-title">Success Stories from Our Farmers</h2>
+          <h2 className="section-title">Success Stories</h2>
+
+          <div className="hero-stats">
+            <div className="stat-item">
+              <div className="stat-number">15K+</div>
+              <div className="stat-label">Active Farmers</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">89%</div>
+              <div className="stat-label">Yield Improvement</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">40%</div>
+              <div className="stat-label">Water Savings</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">AI Monitoring</div>
+            </div>
+          </div>
+
           <div className="testimonials-grid">
             <div className="testimonial-card">
               <div className="testimonial-content">
